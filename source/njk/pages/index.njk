@@ -1,0 +1,305 @@
+{% extends "_layout.njk" %}
+
+{% set title = 'Главная' %}
+
+{% block main %}
+  <section class="reviews page-main__reviews slider">
+    <h1 class="visually-hidden">
+      Обзоры на кофе.
+    </h1>
+    <div class="slider__wrapper">
+      <ul class="reviews-list slider-list">
+        <li class="reviews-item">
+          <picture class="reviews__picture picture">
+            <img class="picture__image" src="#!" srcset="#!" alt="Кофе Декаф Флэт Уайт.">
+          </picture>
+          <p class="reviews__ad">
+            Новинка!
+          </p>
+          <p class="reviews__title">
+            Декаф Флэт Уайт
+          </p>
+          <p class="reviews__description">
+            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+            что нужно для расслабления после тяжёлого рабочего дня
+          </p>
+          <p class="reviews__price"><del class="reviews__price-old">
+            295P</del>
+            <ins class="reviews__price-new">225P</ins>
+          </p>
+          <button class="reviews__button button" type="submit">
+            Заказать
+          </button>
+        </li>
+        <li class="reviews-item">
+          <picture class="reviews__picture picture">
+            <img class="picture__image" src="#!" srcset="#!" alt="Кофе Декаф Флэт Уайт.">
+          </picture>
+          <p class="reviews__ad">
+            Новинка!
+          </p>
+          <p class="reviews__title">
+            Декаф Флэт Уайт
+          </p>
+          <p class="reviews__description">
+            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+            что нужно для расслабления после тяжёлого рабочего дня
+          </p>
+          <p class="reviews__price"><del class="reviews__price-old">
+            295P</del>
+            <ins class="reviews__price-new">225P</ins>
+          </p>
+          <button class="reviews__button button" type="submit">
+            Заказать
+          </button>
+        </li>
+        <li class="reviews-item">
+          <picture class="reviews__picture picture">
+            <img class="picture__image" src="#!" srcset="#!" alt="Кофе Декаф Флэт Уайт.">
+          </picture>
+          <p class="reviews__ad">
+            Новинка!
+          </p>
+          <p class="reviews__title">
+            Декаф Флэт Уайт
+          </p>
+          <p class="reviews__description">
+            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+            что нужно для расслабления после тяжёлого рабочего дня
+          </p>
+          <p class="reviews__price"><del class="reviews__price-old">
+            295P</del>
+            <ins class="reviews__price-new">225P</ins>
+          </p>
+          <button class="reviews__button button" type="submit">
+            Заказать
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="features page-main__features">
+    <h2 class="caption">Преимущества.</h2>
+      <span class="title">Главные причины выбрать Drink2Go</span>
+    <ul class="features__list">
+      <li class="features__item features__item--speed">
+        <span class="features__title">
+          Скорость
+        </span>
+        <p class="features__description">
+          Готовый напиток всегда под рукой — просто открой банку
+        </p>
+      </li>
+      <li class="features__item features__item--fit">
+        <span class="features__title">
+          Удобство
+        </span>
+        <p class="features__description">
+          Легко помещается и в карман, и в маленькую сумочку
+        </p>
+      </li>
+      <li class="features__item features__item--energy">
+        <span class="features__title">
+          Бодрость
+        </span>
+        <p class="features__description">
+          Сбалансированная доза кофеина даст мощный заряд энергии
+        </p>
+      </li>
+      <li class="features__item features__item--eco">
+        <span class="features__title">
+          Экологичность
+        </span>
+        <p class="features__description">
+          Вся упаковка сделана из перерабатываемых материалов
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section class="catalog page-main__catalog">
+    <h2 class="caption">Каталог</h2>
+    <span class="title">Каталог кофейных напитков</span>
+    <form class="form catalog__slot" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="price form__price range">
+        <legend class="form-title">
+          Цена.
+        </legend>
+        <p class="price__item">
+          <label class="visually-hidden" for="price">
+            Цена
+          </label>
+          <input class="range-control" id="price" type="range" name="price" min="0" max="1000" step="50" value="900">
+          <button class="range__button range__button--min" type="button">
+            <span class="visually-hidden">Установить минимальную цену</span>
+          </button>
+          <button class="range__button range__button--max" type="button">
+            <span class="visually-hidden">Установить максимальную цену</span>
+          </button>
+          <input class="price-field" name="price[]" type="number" value="0" max="1000" min="0" step="50">
+          <input class="price-field" name="price[]" type="number" value="0" max="1000" min="0" step="50">
+        </p>
+      </fieldset>
+      <fieldset class="checkers form__set form__set--checkers">
+        <legend class="form-title">
+          Наличие молока
+        </legend>
+        <ul class="checkers__list">
+          <li class="checkers__item checkers__item--radio">
+            <input class="checkers__input checkers__input--radio" id="checker-no-matter" type="radio" name="milk[]" value="no-matter" checked>
+            <label class="checkers__label" for="checker-no-matter">
+              Неважно
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--radio">
+            <input class="checkers__input checkers__input--radio" id="checker-animal-milk" type="radio" name="milk[]" value="animal-milk">
+            <label class="checkers__label" for="checker-animal-milk">
+              Только животное
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--radio">
+            <input class="checkers__input checkers__input--radio" id="checker-vegetable-milk" type="radio" name="milk[]" value="vegetable-milk">
+            <label class="checkers__label" for="checker-vegetable-milk">
+              Только растительное
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--radio">
+            <input class="checkers__input checkers__input--disabled checkers__input--radio" id="checker-without-milk" type="radio" name="milk[]" value="without-milk" disabled>
+            <label class="checkers__label" for="checker-without-milk">
+              Без молока
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="checkers form__set form__set--checkers">
+        <legend class="form-title">
+          Страна произрастания
+        </legend>
+        <ul class="checkers__list">
+          <li class="checkers__item checkers__item--checkbox">
+            <input class="checkers__input checkers__input--checkbox" id="checker-brazil" type="checkbox" name="country[]" value="brazil" checked>
+            <label class="checkers__label" for="checker-brazil">
+              Бразилия
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--checkbox">
+            <input class="checkers__input checkers__input--checkbox" id="checker-ethiopia" type="checkbox" name="country[]" value="ethiopia">
+            <label class="checkers__label" for="checker-ethiopia">
+              Эфиопия
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--checkbox">
+            <input class="checkers__input checkers__input--checkbox" id="checker-colombia" type="checkbox" name="country[]" value="colombia">
+            <label class="checkers__label" for="checker-colombia">
+              Колумбия
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--checkbox">
+            <input class="checkers__input checkers__input--checkbox" id="checker-costa-rica" type="checkbox" name="country[]" value="costa-rica">
+            <label class="checkers__label" for="checker-costa-rica">
+              Коста-Рика
+            </label>
+          </li>
+          <li class="checkers__item checkers__item--checkbox">
+            <input class="checkers__input checkers__input--disabled checkers__input--checkbox" id="checker-peru" type="checkbox" name="country[]" value="peru" disabled>
+            <label class="checkers__label" for="checker-peru">
+              Перу
+            </label>
+          </li>
+        </ul>
+    </fieldset>
+    <button class="button form__button" type="submit">Применить фильтр</button>
+    <button class="button form__button" type="reset">Сбросить фильтр</button>
+    </form>
+  </section>
+  <section class="result">
+    <h2 class="result-heading">Сортировка:</h2>
+    <label aria-label="Сортировка.">
+      <select class="result-sort select" name="sorting-dir" data-submit="">
+        <option value="default">По умолчанию</option>
+        <option value="popular">По популярности</option>
+        <option value="price">По цене</option>
+      </select>
+    </label>
+    <ul class="result-list">
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+      <li class="result-item coffee">
+        <a class="coffee__link" href="404.html">
+          <picture class="coffee__image picture">
+            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+          </picture>
+          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+        </a>
+        <p class="coffee__description">
+          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        </p>
+        <p class="coffee__price">225P</p>
+        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+      </li>
+    </ul>
+  </section>
+    <div class="map"></div>
+{% endblock %}
