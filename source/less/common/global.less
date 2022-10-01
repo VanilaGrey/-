@@ -1,10 +1,25 @@
 :root {
   --color-black: #000000;
+  --color-light-black: #333333;
+  --color-white: #ffffff;
+  --color-light-pink: #f3ebe1;
+  --color-purple: #7859cf;
   --scrollbar-width: 0;
   min-width: 320px;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 29px;
-  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: var(--color-light-black);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 a {

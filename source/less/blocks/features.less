@@ -1,0 +1,48 @@
+.features {
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+
+.features__item {
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 36px auto 10px;
+    background-repeat: no-repeat;
+  }
+
+  &--speed::before {
+    background-image: url("../img/sprite.svg#icon-watch");
+  }
+
+  &--fit::before {
+    background-image: url("../img/sprite.svg#icon-shield");
+  }
+
+  &--energy::before {
+    background-image: url("../img/sprite.svg#icon-lightning");
+  }
+
+  &--eco::before {
+    background-image: url("../img/sprite.svg#icon-leaf");
+  }
+}
+
+.features__description {
+  margin: 0;
+}

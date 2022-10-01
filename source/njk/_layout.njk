@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Drink2Go &gt; {{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/opensansbold.woff2"as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2"as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="#">
     <link rel="icon" href="#" type="image/svg+xml">
@@ -18,8 +19,7 @@
     <header class="page-header page__header">
       <div class="page-header__inner">
         <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }} aria-label="На главную.">
-          <svg class="logo__image" role="img" aria-label="Логотип Drink2Go." width="32" height="36" focusable="false">
-          </svg>
+          <img class="logo__image" src="img/logo/icon-logo-drink2go-mobile.svg" width="32" height="36" alt="Логотип drink2go.">
         </a>
         <a class="account page-header__account" href="#!">
           <span class="visually-hidden">Войти в аккаунт.</span>
@@ -141,6 +141,11 @@
         </svg>
       </a>
     </footer>
+    <script>
+      window.pinegladePP = { breakpoints: [320, 768, 1440] };
+    </script>
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js">
+    </script>
     <script src="js/script.js">
     </script>
   </body>
