@@ -1,0 +1,100 @@
+.range {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.range__group {
+  position: relative;
+  margin: 27px 0 2px 0;
+  padding: 5px 15px 5px 15px;
+  border: 2px solid var(--color-light-purple);
+  border-radius: 4px;
+}
+
+.range__dash {
+  margin-top: 25px;
+  padding: 10px 19px;
+}
+
+.range__field {
+  width: 50%;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  text-align: center;
+  color: var(--color-black);
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range__label {
+  margin-left: auto;
+  text-transform: lowercase;
+  opacity: 0.3;
+}
+
+.range__target {
+  width: 100%;
+  margin: 20px 3px 0;
+}
+
+.range__base {
+  position: relative;
+  height: 20px;
+}
+
+.range__base::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: 8px;
+  left: 0;
+  background-color: var(--color-middle-grey);
+  opacity: 0.3;
+}
+
+.range__connect,
+.range__origin {
+  position: absolute;
+  width: 100%;
+  transform-origin: 0 0;
+  transform-style: flat;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+
+.range__connect {
+  top: 8px;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-light-purple);
+}
+
+.range__origin {
+  top: 0;
+  left: 100%;
+}
+
+.range__handle {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-light-purple);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--upper {
+    left: 9px;
+  }
+}
+
+.range__wrapper {
+  display: flex;
+}

@@ -13,7 +13,7 @@
           <picture class="reviews__picture picture">
             <img class="picture__image" src="img/slider/coffee-slider-mobile.png" alt="Кофе Декаф Флэт Уайт.">
           </picture>
-          <p class="caption">
+          <p class="page-main__caption">
             Новинка!
           </p>
           <p class="reviews__title">
@@ -36,7 +36,7 @@
           <picture class="reviews__picture picture">
             <img class="picture__image" src="img/slider/coffee-slider-mobile2.png" alt="Кофе Декаф Флэт Уайт.">
           </picture>
-          <p class="caption">
+          <p class="page-main__caption">
             Новинка!
           </p>
           <p class="reviews__title">
@@ -60,7 +60,7 @@
           <picture class="reviews__picture picture">
             <img class="picture__image" src="img/slider/coffee-slider-mobile3.png" alt="Кофе Декаф Флэт Уайт.">
           </picture>
-          <p class="caption">
+          <p class="page-main__caption">
             Новинка!
           </p>
           <p class="reviews__title">
@@ -82,37 +82,37 @@
     </div>
   </section>
   <section class="features page-main__features">
-    <h2 class="caption">Преимущества</h2>
-      <span class="title">Главные причины выбрать Drink2Go</span>
+    <h2 class="page-main__caption">Преимущества</h2>
+      <span class="page-main__title">Главные причины выбрать Drink2Go</span>
     <ul class="features__list">
       <li class="features__item features__item--speed">
-        <span class="features__title">
+        <h3 class="features__title">
           Скорость
-        </span>
+        </h3>
         <p class="features__description">
           Готовый напиток всегда под рукой — просто открой банку
         </p>
       </li>
       <li class="features__item features__item--fit">
-        <span class="features__title">
+        <h3 class="features__title">
           Удобство
-        </span>
+        </h3>
         <p class="features__description">
-          Легко помещается и в карман,<br>&nbsp;и в маленькую сумочку
+          Легко помещается и в карман,<br>и в маленькую сумочку
         </p>
       </li>
       <li class="features__item features__item--energy">
-        <span class="features__title">
+        <h3 class="features__title">
           Бодрость
-        </span>
+        </h3>
         <p class="features__description">
           Сбалансированная доза кофеина даст мощный заряд энергии
         </p>
       </li>
       <li class="features__item features__item--eco">
-        <span class="features__title">
+        <h3 class="features__title">
           Экологичность
-        </span>
+        </h3>
         <p class="features__description">
           Вся упаковка сделана<br>из перерабатываемых материалов
         </p>
@@ -120,30 +120,42 @@
     </ul>
   </section>
   <section class="catalog page-main__catalog">
-    <h2 class="caption">Каталог</h2>
-    <span class="title">Каталог кофейных напитков</span>
+    <h2 class="page-main__caption">Каталог</h2>
+    <span class="page-main__title">Каталог кофейных напитков</span>
     <form class="form catalog__slot" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="price form__price range">
-        <legend class="form-title">
-          Цена.
+      <fieldset class="price form__price">
+        <legend class="form__title form__title--price">
+          Цена
         </legend>
-        <p class="price__item">
-          <label class="visually-hidden" for="price">
-            Цена
-          </label>
-          <input class="range-control" id="price" type="range" name="price" min="0" max="1000" step="50" value="900">
-          <button class="range__button range__button--min" type="button">
-            <span class="visually-hidden">Установить минимальную цену</span>
-          </button>
-          <button class="range__button range__button--max" type="button">
-            <span class="visually-hidden">Установить максимальную цену</span>
-          </button>
-          <input class="price-field" name="price[]" type="number" value="0" max="1000" min="0" step="50">
-          <input class="price-field" name="price[]" type="number" value="0" max="1000" min="0" step="50">
-        </p>
+        <div class="range">
+          <div class="range__target">
+            <div class="range__base">
+              <div class="range__connect" style="transform: scaleX(0.91)"></div>
+              <div class="range__origin" style="transform: translate(-100%)">
+                <button class="range__handle range__handle--lower" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+              </div>
+              <div class="range__origin" style="transform: translate(-18.9189%)">
+                <button class="range__handle range__handle--upper" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
+            <div class="range__wrapper">
+              <label class="range__group">
+                <input class="range__field" name="price[]" type="number" max="1000" min="0" step="100" placeholder="0">
+                </label>
+                <span class="range__dash">-</span>
+              <label class="range__group">
+                <input class="range__field" name="price[]" type="number" value="900" max="1000" min="0" step="100">
+              </label>
+            </div>
+          </div>
+        </div>
       </fieldset>
       <fieldset class="checkers form__set form__set--checkers">
-        <legend class="form-title">
+        <legend class="form__title form__title--milk">
           Наличие молока
         </legend>
         <ul class="checkers__list">
@@ -166,15 +178,15 @@
             </label>
           </li>
           <li class="checkers__item checkers__item--radio">
-            <input class="checkers__input checkers__input--disabled checkers__input--radio" id="checker-without-milk" type="radio" name="milk[]" value="without-milk" disabled>
-            <label class="checkers__label" for="checker-without-milk">
+            <input class="checkers__input checkers__input--radio" id="checker-without-milk" type="radio" name="milk[]" value="without-milk" disabled>
+            <label class="checkers__label checkers__label--disabled" for="checker-without-milk">
               Без молока
             </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="checkers form__set form__set--checkers">
-        <legend class="form-title">
+        <legend class="form__title form__title--country">
           Страна произрастания
         </legend>
         <ul class="checkers__list">
@@ -203,106 +215,148 @@
             </label>
           </li>
           <li class="checkers__item checkers__item--checkbox">
-            <input class="checkers__input checkers__input--disabled checkers__input--checkbox" id="checker-peru" type="checkbox" name="country[]" value="peru" disabled>
-            <label class="checkers__label" for="checker-peru">
+            <input class="checkers__input checkers__input--checkbox" id="checker-peru" type="checkbox" name="country[]" value="peru" disabled>
+            <label class="checkers__label checkers__label--disabled" for="checker-peru">
               Перу
             </label>
           </li>
         </ul>
     </fieldset>
     <button class="button form__button" type="submit">Применить фильтр</button>
-    <button class="button form__button" type="reset">Сбросить фильтр</button>
+    <button class="button form__button form__button--reset" type="reset">Сбросить фильтр</button>
     </form>
   </section>
-  <section class="result">
-    <h2 class="result-heading">Сортировка:</h2>
-    <label aria-label="Сортировка.">
-      <select class="result-sort select" name="sorting-dir" data-submit="">
-        <option value="default">По умолчанию</option>
-        <option value="popular">По популярности</option>
-        <option value="price">По цене</option>
-      </select>
-    </label>
-    <ul class="result-list">
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+  <section class="photo">
+    <div class="photo__wrapper photo__wrapper-sort">
+      <h2 class="photo__heading">Сортировка:</h2>
+      <label aria-label="Сортировка.">
+        <select class="photo__sort select" name="sorting-dir" data-submit="">
+          <option value="default">по умолчанию</option>
+          <option value="popular">по популярности</option>
+          <option value="price">по цене</option>
+        </select>
+      </label>
+    </div>
+    <ul class="photo__list">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-1.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
       </li>
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-2.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
       </li>
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-3.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
       </li>
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-4.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
       </li>
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-5.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
       </li>
-      <li class="result-item coffee">
-        <a class="coffee__link" href="404.html">
-          <picture class="coffee__image picture">
-            <img src="#!" alt="Decaf Flat White" width="130" height="188">
+      <li class="photo__item photo">
+        <a class="photo__link" href="404.html">
+          <picture class="photo__image picture">
+            <img src="img/photo/photo-coffee-6.jpg" alt="Decaf Flat White" width="130" height="188">
           </picture>
-          <h3 class="coffee__title">Декаф Флэт Уайт</h3>
+          <h3 class="photo__title">Декаф Флэт Уайт</h3>
         </a>
-        <p class="coffee__description">
-          Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+        <p class="photo__description">
+          Кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком
         </p>
-        <p class="coffee__price">225P</p>
-        <a class="button button__result button__result--coffee" href="404.html">В корзину</a>
+        <div class="photo__wrapper">
+          <p class="photo__price">225₽</p>
+          <a class="button photo-button" href="404.html">В корзину</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="pagination photo__pagination">
+      <li class="pagination__item">
+        <button class="button pagination__link pagination__link--arrow-left" name="page" type="submit" value="0">
+          <span class="visually-hidden">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="pagination__item">
+        <button class="button pagination__link" name="page" type="submit" value="1">1</button>
+      </li>
+      <li class="pagination__item">
+        <button class="button pagination__link pagination__link--current " name="page" type="submit" value="2">2</button>
+      </li>
+      <li class="pagination__item">
+        <button class="button pagination__link" name="page" type="submit" value="3">3</button>
+      </li>
+      <li class="pagination__item">
+        <button class="button pagination__link pagination__link--arrow-right" name="page" type="submit" value="4">
+          <span class="visually-hidden">
+            5
+          </span>
+        </button>
       </li>
     </ul>
   </section>
-    <div class="map"></div>
+  <section class="map">
+    <h2 class="visually-hidden">Карта</h2>
+    <div class="map__shop" id="#map__shop"></div>
+  </section>
 {% endblock %}

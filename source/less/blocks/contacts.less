@@ -1,0 +1,38 @@
+.contacts {
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--color-purple);
+}
+
+.contacts__item {
+  display: flex;
+  margin-bottom: 16px;
+
+  &--tel {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 23px;
+    height: 16px;
+    margin: 2px -4px 0 0;
+    mask-size: 15px;
+    background-color: var(--color-purple);
+    mask-repeat: no-repeat;
+  }
+
+  &--adress::before {
+    mask-image: url("../img/sprite.svg#icon-adress");
+  }
+
+  &--tel::before {
+    mask-image: url("../img/sprite.svg#icon-tel");
+  }
+}
