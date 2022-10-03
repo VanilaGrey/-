@@ -21,39 +21,41 @@
         <a class="logo page-header__logo" href="index.html" {{ 'aria-current="page"' if page == 'index' }} aria-label="На главную.">
           <img class="logo__image" src="img/logo/icon-logo-drink2go-mobile.svg" width="32" height="36" alt="Логотип drink2go.">
         </a>
-        <a class="account page-header__account" href="#!">
-          <span class="visually-hidden">Войти в аккаунт.</span>
-        </a>
-        <a class="account page-header__basket" href="#!">
-          <span class="visually-hidden">Корзина.</span>
-        </a>
-        <button class="page-header__toggle page-header__toggle--opened" type="button">
-          <span class="visually-hidden">Переключить режим видимости меню.</span>
-        </button>
-        <nav class="nav page-header__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
-                Главная
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link {{ 'nav__link--current' if page == 'catalog' }}" href="catalog.html" {{ 'aria-current="page"' if page == 'caatalog' }}>
-                Каталог
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link {{ 'nav__link--current' if page == 'delivery' }}" href="delivery.html" {{ 'aria-current="page"' if page == 'delivery' }}>
-                Доставка
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="https://htmlacademy.ru">
-                О нас
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div class="page-header__nav">
+          <a class="page-header__toggle page-header__toggle--account" href="#!">
+            <span class="visually-hidden">Войти в аккаунт.</span>
+          </a>
+          <a class="page-header__toggle page-header__toggle--basket" href="#!">
+            <span class="visually-hidden">Корзина.</span>
+          </a>
+          <button class="page-header__toggle page-header__toggle--menu page-header__toggle--opened" type="button">
+            <span class="visually-hidden">Переключить режим видимости меню.</span>
+          </button>
+          <nav class="nav page-header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link {{ 'nav__link--current' if page == 'index' }}" href="index.html" {{ 'aria-current="page"' if page == 'index' }}>
+                  Главная
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link {{ 'nav__link--current' if page == 'catalog' }}" href="catalog.html" {{ 'aria-current="page"' if page == 'caatalog' }}>
+                  Каталог
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link {{ 'nav__link--current' if page == 'delivery' }}" href="delivery.html" {{ 'aria-current="page"' if page == 'delivery' }}>
+                  Доставка
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="https://htmlacademy.ru">
+                  О нас
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="page-main page__main">
